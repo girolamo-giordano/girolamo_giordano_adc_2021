@@ -2,7 +2,6 @@ package it.semanticharmony;
 
 import java.io.Serializable;
 
-import net.tomp2p.peers.Number160;
 import net.tomp2p.peers.PeerAddress;
 
 public class PeerUser implements Serializable {

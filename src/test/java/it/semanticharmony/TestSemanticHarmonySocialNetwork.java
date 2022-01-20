@@ -4,21 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
-import org.junit.jupiter.api.TestMethodOrder;
-import org.junit.jupiter.api.parallel.ResourceLock;
-
-import it.semanticharmony.MessageListener;
-import it.semanticharmony.SemanticHarmonySocialNetworkImpl;
 
 
 public class TestSemanticHarmonySocialNetwork  {
@@ -143,6 +131,7 @@ public class TestSemanticHarmonySocialNetwork  {
 	@Test
 	void testCaseJoin()
 	{
+	
 		//Ci attendiamo che venga restituito false poichè passiamo profile key=null e nickname=null
 		assertFalse(peer0.join(null, null));
 		//Ci attendiamo che venga restituito false poichè passiamo profile key=stringa vuota e nickname=null

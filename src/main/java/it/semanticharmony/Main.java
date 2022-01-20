@@ -20,6 +20,7 @@ public class Main {
 	
 	
 	
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) throws Exception {
 		Main example = new Main();
 		MessageListenerImpl mli=new MessageListenerImpl(id);
@@ -69,9 +70,7 @@ public class Main {
 						
 					}
 					String key= peer.createAuserProfileKey(answers);
-					if(key == null)
-						terminal.printf("Appartieni già ad un gruppo, esci prima dal gruppo\n");
-					else if(!peer.join(key, nickname))
+					if(!peer.join(key, nickname))
 						terminal.printf("Appartieni già ad un gruppo\n");
 					break;
 				
@@ -89,7 +88,7 @@ public class Main {
 					else
 					{
 						for(String friend:myfriends)
-							terminal.printf(friend);
+							terminal.printf(friend+"\n");
 					}break;
 				case 3:
 					terminal.printf("SEND MESSAGE TO GROUP\n");
@@ -150,6 +149,7 @@ public class Main {
 
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public static void printMenu(TextTerminal terminal) {
 		terminal.printf("\n1 - GET QUESTIONS AND JOIN GROUP\n");
 		terminal.printf("\n2 - GET LIST FRIENDS\n");

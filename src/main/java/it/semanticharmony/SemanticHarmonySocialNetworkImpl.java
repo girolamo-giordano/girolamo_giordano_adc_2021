@@ -1,22 +1,13 @@
 package it.semanticharmony;
 
-import java.io.IOException;
 import java.net.InetAddress;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-
 import net.tomp2p.dht.FutureGet;
-import net.tomp2p.dht.FuturePut;
 import net.tomp2p.dht.PeerBuilderDHT;
 import net.tomp2p.dht.PeerDHT;
-import net.tomp2p.futures.BaseFuture;
-import net.tomp2p.futures.BaseFutureListener;
 import net.tomp2p.futures.FutureBootstrap;
 import net.tomp2p.futures.FutureDirect;
 import net.tomp2p.p2p.Peer;
@@ -148,7 +139,7 @@ public class SemanticHarmonySocialNetworkImpl implements SemanticHarmonySocialNe
 			
 			if(_profile_key==null || _nick_name == null || peeruser == null || _profile_key.isEmpty() || _nick_name.isEmpty()) return false;		
 			if(peeruser.isBusy()) return false;
-			if(_nick_name != peeruser.getNickname()) return false;
+			if(! _nick_name.equals(peeruser.getNickname())) return false;
 			FutureGet futureGet = _dht.get(Number160.createHash(_profile_key)).start();
 			
 			futureGet.awaitUninterruptibly();
@@ -158,21 +149,19 @@ public class SemanticHarmonySocialNetworkImpl implements SemanticHarmonySocialNe
 			nickstoadd = (Map<String,PeerUser>) futureGetAcc.dataMap().values().iterator().next().object();
 			
 			
-			if (futureGet.isSuccess() && futureGet.isEmpty()) 
+			if (futureGet.isSuccess() && futureGetAcc.isSuccess() && futureGet.isEmpty()) 
 			{
 				Map<String,PeerUser> nicks_peer=new HashMap<String,PeerUser>();
 				peeruser.setBusy(true);
 				peeruser.setKey(_profile_key);
 				nicks_peer.put(_nick_name, peeruser);
 				nickstoadd.replace(_nick_name, peeruser);
-				_dht.put(Number160.createHash(_profile_key)).data(new Data(nicks_peer)).start().awaitUninterruptibly();
-				if(futureGetAcc.isSuccess())
-					_dht.put(Number160.createHash(all_accounts)).data(new Data(nickstoadd)).start().awaitUninterruptibly();
-				else 
-					return false;
+				_dht.put(Number160.createHash(_profile_key)).data(new Data(nicks_peer)).start().awaitUninterruptibly();	
+				_dht.put(Number160.createHash(all_accounts)).data(new Data(nickstoadd)).start().awaitUninterruptibly();
+			
 				return true;
 			}
-			else if(futureGet.isSuccess() && !futureGet.isEmpty())
+			else if(futureGet.isSuccess() && futureGetAcc.isSuccess() && !futureGet.isEmpty())
 			{
 				Map<String,PeerUser> nicks;
 				nicks = (Map<String,PeerUser>) futureGet.dataMap().values().iterator().next().object();
@@ -188,10 +177,7 @@ public class SemanticHarmonySocialNetworkImpl implements SemanticHarmonySocialNe
 				nicks.put(_nick_name, peeruser);
 				nickstoadd.replace(_nick_name, peeruser);
 				_dht.put(Number160.createHash(_profile_key)).data(new Data(nicks)).start().awaitUninterruptibly();
-				if(futureGetAcc.isSuccess())
-					_dht.put(Number160.createHash(all_accounts)).data(new Data(nickstoadd)).start().awaitUninterruptibly();
-				else 
-					return false;
+				_dht.put(Number160.createHash(all_accounts)).data(new Data(nickstoadd)).start().awaitUninterruptibly();
 				return true;
 			}
 		} catch (Exception e) {

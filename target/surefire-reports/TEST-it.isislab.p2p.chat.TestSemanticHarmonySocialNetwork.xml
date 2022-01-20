@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="23.261" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Gino\Desktop\ADC\Progetto\p2ppublishsubscribe-master\target\test-classes;C:\Users\Gino\Desktop\ADC\Progetto\p2ppublishsubscribe-master\target\classes;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-all\5.0-Beta8\tomp2p-all-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-core\5.0-Beta8\tomp2p-core-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\io\netty\netty-transport\4.0.28.Final\netty-transport-4.0.28.Final.jar;C:\Users\Gino\.m2\repository\io\netty\netty-buffer\4.0.28.Final\netty-buffer-4.0.28.Final.jar;C:\Users\Gino\.m2\repository\io\netty\netty-common\4.0.28.Final\netty-common-4.0.28.Final.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-nat\5.0-Beta8\tomp2p-nat-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\org\bitlet\weupnp\0.1.2\weupnp-0.1.2.jar;C:\Users\Gino\.m2\repository\com\ganyo\gcm-server\1.0.2\gcm-server-1.0.2.jar;C:\Users\Gino\.m2\repository\com\googlecode\json-simple\json-simple\1.1\json-simple-1.1.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-android\5.0-Beta8\tomp2p-android-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-replication\5.0-Beta8\tomp2p-replication-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-storage\5.0-Beta8\tomp2p-storage-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\org\mapdb\mapdb\1.0.6\mapdb-1.0.6.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-dht\5.0-Beta8\tomp2p-dht-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-tracker\5.0-Beta8\tomp2p-tracker-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;C:\Users\Gino\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Gino\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Gino\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Gino\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Gino\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Gino\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Gino\.m2\repository\args4j\args4j\2.33\args4j-2.33.jar;C:\Users\Gino\.m2\repository\org\beryx\text-io\3.3.0\text-io-3.3.0.jar;C:\Users\Gino\.m2\repository\jline\jline\2.14.5\jline-2.14.5.jar;C:\Users\Gino\.m2\repository\org\beryx\awt-color-factory\1.0.0\awt-color-factory-1.0.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Gino\AppData\Local\Temp\surefire8161208723570190091\surefirebooter1924240036708564535.jar C:\Users\Gino\AppData\Local\Temp\surefire8161208723570190091 2022-01-18T19-34-46_609-jvmRun1 surefire4125852745064670350tmp surefire_0221032669166640906tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\Gino\Desktop\ADC\Progetto\p2ppublishsubscribe-master\target\test-classes;C:\Users\Gino\Desktop\ADC\Progetto\p2ppublishsubscribe-master\target\classes;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-all\5.0-Beta8\tomp2p-all-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-core\5.0-Beta8\tomp2p-core-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\io\netty\netty-transport\4.0.28.Final\netty-transport-4.0.28.Final.jar;C:\Users\Gino\.m2\repository\io\netty\netty-buffer\4.0.28.Final\netty-buffer-4.0.28.Final.jar;C:\Users\Gino\.m2\repository\io\netty\netty-common\4.0.28.Final\netty-common-4.0.28.Final.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-nat\5.0-Beta8\tomp2p-nat-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\org\bitlet\weupnp\0.1.2\weupnp-0.1.2.jar;C:\Users\Gino\.m2\repository\com\ganyo\gcm-server\1.0.2\gcm-server-1.0.2.jar;C:\Users\Gino\.m2\repository\com\googlecode\json-simple\json-simple\1.1\json-simple-1.1.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-android\5.0-Beta8\tomp2p-android-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-replication\5.0-Beta8\tomp2p-replication-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-storage\5.0-Beta8\tomp2p-storage-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\org\mapdb\mapdb\1.0.6\mapdb-1.0.6.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-dht\5.0-Beta8\tomp2p-dht-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\net\tomp2p\tomp2p-tracker\5.0-Beta8\tomp2p-tracker-5.0-Beta8.jar;C:\Users\Gino\.m2\repository\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;C:\Users\Gino\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Gino\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Gino\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Gino\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Gino\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Gino\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Gino\.m2\repository\args4j\args4j\2.33\args4j-2.33.jar;C:\Users\Gino\.m2\repository\org\beryx\text-io\3.3.0\text-io-3.3.0.jar;C:\Users\Gino\.m2\repository\jline\jline\2.14.5\jline-2.14.5.jar;C:\Users\Gino\.m2\repository\org\beryx\awt-color-factory\1.0.0\awt-color-factory-1.0.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Gino"/>
+    <property name="user.language" value="it"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_251\jre"/>
+    <property name="basedir" value="C:\Users\Gino\Desktop\ADC\Progetto\p2ppublishsubscribe-master"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Gino\AppData\Local\Temp\surefire8161208723570190091\surefirebooter1924240036708564535.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_251\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_251-b08"/>
+    <property name="user.name" value="Gino"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Gino\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Gino\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_251"/>
+    <property name="user.dir" value="C:\Users\Gino\Desktop\ADC\Progetto\p2ppublishsubscribe-master"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\libnvvp;;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\IsoBuster;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Gino\Documents;E:\chromedriver;C:\Android;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\Hostx86\x86\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2021.3.1\;C:\Users\Gino\Documents\flutter\bin;C:\Users\Gino\anaconda3;C:\Users\Gino\anaconda3\Library\mingw-w64\bin;C:\Users\Gino\anaconda3\Library\usr\bin;C:\Users\Gino\anaconda3\Library\bin;C:\Users\Gino\anaconda3\Scripts;C:\Users\Gino\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Users\Gino\AppData\Local\GitHubDesktop\bin;E:\MikTeX\miktex\bin\x64\;C:\Users\Gino\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\Gino\AppData\Local\Pandoc\;C:\Users\Gino\AppData\Roaming\npm;E:\gcc\bin;C:\Users\Gino\AppData\Local\Markdown Monster;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.251-b08"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testCaseAddUserToGroup" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="3.166"/>
+  <testcase name="testCaseCreateGroup" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.397"/>
+  <testcase name="testCaseCreateAUserProfileKey" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.22"/>
+  <testcase name="testCaseGetUserProfileQuestions" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.207"/>
+  <testcase name="testLeaveNetwork" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.218"/>
+  <testcase name="testCaseRegisterNickname" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.182"/>
+  <testcase name="testCaseLeaveGroup" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.203"/>
+  <testcase name="testCaseJoin" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.211"/>
+  <testcase name="testCaseGetFriends" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.203"/>
+  <testcase name="testCaseSendMessageToGroup" classname="it.isislab.p2p.chat.TestSemanticHarmonySocialNetwork" time="2.246"/>
+</testsuite>

@@ -2,12 +2,6 @@
 
 Progetto per l'esame di Architetture Distribuite per il Cloud.
 
-## Prerequisiti del progetto
-
-- Java 8 o superiore.
-- Apache Maven.
-
-
 ## Descrizione del progetto
 
 Il progetto mira a sviluppare un social network basato sugli interessi degli utenti, nella soluzione sviluppata vengono poste delle domande riguardanti la conoscenza di java ed a seconda dello score ottenuto nel rispondere a tutte le domande viene assegnata una key, con tale key è possibile accedere al gruppo di persone che hanno ottenuto lo stesso score. La soluzione realizzata permette di:
@@ -27,7 +21,7 @@ Per lo sviluppo della soluzione sono stati utilizzati:
 - Java: Linguaggio di programmazione utilizzato per lo sviluppo del progetto.
 - [TomP2P](https://tomp2p.net/): Libreria che permette la gestione di dht all'interno della rete.
 - [Maven](https://maven.apache.org/): Software project management utilizzato per la gestione del progetto.
-- JUnit: Libreria utilizzata per poter effettuare testing.
+- JUnit: Framework utilizzato per poter effettuare testing.
 - [Docker](https://www.docker.com/): Software utilizzato per la creazione di container.
 
 ## Struttura del progetto
@@ -47,10 +41,10 @@ Nel package ```it.semanticharmony``` troviamo:
 	- **key** tiene traccia della key del gruppo di appartenenza dell'utente
 	
 - **SemanticHarmonySocialNetwork** interfaccia che definisce le operazioni da implementare per lo sviluppo del social network.
-- **SemanticHarmonySocialNetworkImpl** un'implementazione dell'interfaccia. SemanticHarmonySocialNetwork che sfrutta la libreria TomP2P.
+- **SemanticHarmonySocialNetworkImpl** implementazione dell'interfaccia SemanticHarmonySocialNetwork che sfrutta la libreria TomP2P.
 
 ### Descrizione dei metodi implementati
-All'interno della classe SemanticHarmonySocialNetwork troviamo l'implementazione dei metodi descritti nell'interfaccia SemanticHarmonySocialNetworkImpl, tra cui troviamo:
+All'interno della classe SemanticHarmonySocialNetworkImpl troviamo l'implementazione dei metodi descritti nell'interfaccia SemanticHarmonySocialNetwork, tra cui troviamo:
 
 - **registerNickname:** Metodo che permette di registrare il proprio nickname all'interno della rete.
 - **getUserProfileQuestions:** Metodo che restituisce le domande a cui l'utente dovrà rispondere per ottenere uno score.
@@ -65,7 +59,7 @@ All'interno della classe SemanticHarmonySocialNetwork troviamo l'implementazione
 ## Dipendenze
 Le dipendenze necessarie sono definite all'interno del file pom.xml.
 
-```
+```xml
 <dependencies>
 
 		<dependency>
@@ -94,11 +88,11 @@ Le dipendenze necessarie sono definite all'interno del file pom.xml.
 ```
 
 ## Test Case
-Per il testing è stato utilizzato il framework JUnit e sono stati implementati all'interno della classe **TestSemanticHarmonySocialNetwork**, classe che si può trovare nel percorso ```src/test/java/it/semanticharmony```. Prima che ogni test venga chiamato, viene eseguito il metodo **setBefore()** con il tag @BeforeEach, così da eseguirlo prima di ogni test.
+Per il testing è stato utilizzato il framework JUnit e sono stati implementati all'interno della classe **TestSemanticHarmonySocialNetwork**, classe che si può trovare nel percorso ```src/test/java/it/semanticharmony```. Prima che ogni test venga chiamato, viene eseguito il metodo **setBefore()** con **@BeforeEach**, così da eseguirlo prima di ogni test.
 
-```
+```java
 	@BeforeEach
-	 void set() throws Exception
+	 void setBefore() throws Exception
 	{
 		class MessageListenerImpl implements MessageListener{
 			int peerid;
@@ -123,7 +117,7 @@ I test case implementati sono:
 
 - **testCaseRegisterNickname:**
 
-```
+```java
 	@Test
 	void testCaseRegisterNickname() throws InterruptedException{
 		//Il peer0 prova a registrarsi dando in input null, viene restituito false
@@ -150,7 +144,7 @@ I test case implementati sono:
 
 - **testCaseGetUserProfileQuestions:**
 
-```
+```java
 	@Test
 	void testCaseGetUserProfileQuestions()
 	{
@@ -165,7 +159,7 @@ I test case implementati sono:
 
 - **testCaseCreateAUserProfileKey:**
 
-```
+```java
 	@Test
 	void testCaseCreateAUserProfileKey()
 	{
@@ -200,7 +194,7 @@ I test case implementati sono:
 ```
 - **testCaseJoin:**
 
-```
+```java
 @Test
 	void testCaseJoin()
 	{
@@ -301,7 +295,7 @@ I test case implementati sono:
 
 - **testCaseLeaveNetwork:**
 
-```
+```java
 @Test
 	void testLeaveNetwork()
 	{
@@ -338,7 +332,7 @@ I test case implementati sono:
 
 - **testCaseLeaveGroup:**
 
-```
+```java
 		@Test
 	void testCaseLeaveGroup()
 	{
@@ -372,7 +366,7 @@ I test case implementati sono:
 
 - **testCaseGetFriends:**
 
-```
+```java
 		@Test
 	void testCaseGetFriends()
 	{
@@ -424,7 +418,7 @@ I test case implementati sono:
 
 - **testCaseSendMessageToGroup:**
 
-```
+```java
 		@Test
 	void testCaseSendMessageToGroup()
 	{
@@ -469,7 +463,7 @@ I test case implementati sono:
 
 - **testCaseCreateGroup:**
 
-```
+```java
 		@Test
 	void testCaseCreateGroup()
 	{
@@ -499,7 +493,7 @@ I test case implementati sono:
 
 - **testCaseAddUserToGroup:**
 
-```
+```java
 	@Test
 	void testCaseAddUserToGroup()
 	{
@@ -550,9 +544,9 @@ I test case implementati sono:
 	}
 ```
 
-Con **@AfterEach** andiamo a chiamare dopo ogni test il metodo **setAfter()**, che fa la leaveNetwork di tutti i peer e chiama il metodo resetdht in modo da effettuare lo shutdown delle dht dei vari peer, così da non avere conflitti tra un test e l'altro:
+Con **@AfterEach** andiamo a chiamare dopo ogni test il metodo **setAfter()**, che fa la leaveNetwork di tutti i peer e chiama il metodo **resetDht()** in modo da effettuare lo shutdown delle dht dei vari peer, così da non avere conflitti tra un test e l'altro:
 
-```
+```java
 	@AfterEach
 	void setAfter() throws InterruptedException
 	{
@@ -569,7 +563,7 @@ Con **@AfterEach** andiamo a chiamare dopo ogni test il metodo **setAfter()**, c
 
 Qui di seguito viene mostrato il Dockerfile
 
-```
+```dockerfile
 FROM maven:3.5-jdk-8-alpine
 WORKDIR /app
 COPY src ./src

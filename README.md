@@ -1,4 +1,4 @@
-# SEMANTICHARMONYSOCIALNETWORK
+# Semantic Harmony Social Network
 
 Progetto per l'esame di Architetture Distribuite per il Cloud.
 
@@ -93,7 +93,7 @@ Le dipendenze necessarie sono definite all'interno del file pom.xml.
 	</dependencies>
 ```
 
-## TEST CASE
+## Test Case
 Per il testing è stato utilizzato il framework JUnit e sono stati implementati all'interno della classe **TestSemanticHarmonySocialNetwork**, classe che si può trovare nel percorso ```src/test/java/it/semanticharmony```. Prima che ogni test venga chiamato, viene eseguito il metodo **setBefore()** con il tag @BeforeEach, così da eseguirlo prima di ogni test.
 
 ```
@@ -497,10 +497,10 @@ I test case implementati sono:
 	}
 ```
 
-- ** testCaseAddUserToGroup:**
+- **testCaseAddUserToGroup:**
 
 ```
-		@Test
+	@Test
 	void testCaseAddUserToGroup()
 	{
 		
@@ -550,7 +550,7 @@ I test case implementati sono:
 	}
 ```
 
-Con @AfterEach andiamo a chiamare dopo ogni test il metodo setAfter(), che fa la leaveNetwork di tutti i peer e chiama il metodo resetdht in modo da effettuare lo shutdown delle dht dei vari peer, così da non avere conflitti tra un test e l'altro:
+Con **@AfterEach** andiamo a chiamare dopo ogni test il metodo **setAfter()**, che fa la leaveNetwork di tutti i peer e chiama il metodo resetdht in modo da effettuare lo shutdown delle dht dei vari peer, così da non avere conflitti tra un test e l'altro:
 
 ```
 	@AfterEach
